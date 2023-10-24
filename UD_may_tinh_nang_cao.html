@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính nâng cao</title>
+</head>
+<body>
+<input id="src" type="text" style="width: 100px">
+<table>
+    <tr>
+        <td>
+            <button style="width: 20px; text-align: center" onclick="hien(7)">7</button>
+            <button style="width: 20px; text-align: center" onclick="hien(8)">8</button>
+            <button style="width: 20px; text-align: center" onclick="hien(9)">9</button>
+            <button style="width: 20px; text-align: center" onclick="hien('/')">/</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button  style="width: 20px; text-align: center" onclick="hien(4)">4</button>
+            <button  style="width: 20px; text-align: center" onclick="hien(5)">5</button>
+            <button  style="width: 20px; text-align: center" onclick="hien(6)">6</button>
+            <button style="width: 20px; text-align: center" onclick="hien('*')">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button style="width: 20px; text-align: center" onclick="hien(1)">1</button>
+            <button style="width: 20px; text-align: center" onclick="hien(2)">2</button>
+            <button style="width: 20px; text-align: center" onclick="hien(3)">3</button>
+            <button style="width: 20px; text-align: center" onclick="hien('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button style="width: 20px; text-align: center" onclick="hien(0)">0</button>
+            <button style="width: 20px; text-align: center" onclick="hien('.')">.</button>
+            <button style="width: 20px; text-align: center" onclick="ketqua()">=</button>
+            <button style="width: 20px; text-align: center" onclick="hien('+')">+</button>
+            <button onclick="xoa()">AC</button>
+        </td>
+    </tr>
+</table>
+<script>
+    let src = document.getElementById('src')
+    function hien(x) {
+        src.value += x
+    }
+    function ketqua() {
+        src.value = eval(src.value)
+    }
+    function xoa() {
+        src.value = ''
+    }
+
+</script>
+</body>
+</html>
