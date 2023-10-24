@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th style="padding-left: 100px">From Currency</th>
+        <th style="padding-left: 100px">To Currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="st">
+        </td>
+        <td style="padding-left: 100px">
+            <select id="f">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+                <option value="170">Yen</option>
+            </select>
+        </td>
+        <td style="padding-left: 100px">
+            <select id="t">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+                <option value="170">Yen</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<br><br>
+<input type="button" value="Đổi" onclick="doi()">
+<p id="rs">Result: </p>
+<script>
+    function doi() {
+        let st = +document.getElementById('st').value
+        let from = document.getElementById('f').value
+        let to = document.getElementById('t').value
+        document.getElementById('rs').innerHTML = 'Result: ' + (( st * from)/to)
+    }
+    //eval(''): Hiện tổng giá trị trong ngoặc
+</script>
+</body>
+</html>
