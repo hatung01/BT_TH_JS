@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập ứng dụng máy tính</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<input type="text" id="st1">
+<input type="text" id="st2"> <br><br>
+<input  type="button" value="Cộng(+)" onclick="cong()">
+<input type="button" value="Trừ(-)" onclick="tru()">
+<input type="button" value="Nhân(*)" onclick="nhan()">
+<input type="button" value="Chia(/)" onclick="chia()">
+<p id="rs">Kết quả: </p>
+<script>
+    function cong(){
+        let x = (+document.getElementById('st1').value)
+        let y = (+document.getElementById('st2').value)
+        document.getElementById('rs').innerHTML  = 'Kết quả: ' + (x + y);
+    }
+    function tru(){
+        let x = (+document.getElementById('st1').value)
+        let y = (+document.getElementById('st2').value)
+        document.getElementById('rs').innerHTML  = 'Kết quả: ' + (x - y);
+    }
+    function nhan(){
+        let x = (+document.getElementById('st1').value)
+        let y = (+document.getElementById('st2').value)
+        document.getElementById('rs').innerHTML  = 'Kết quả: ' + (x * y);
+    }
+    function chia(){
+        let x = (+document.getElementById('st1').value)
+        let y = (+document.getElementById('st2').value)
+        document.getElementById('rs').innerHTML  = 'Kết quả: ' + (x / y);
+    }
+</script>
+</body>
+</html>
