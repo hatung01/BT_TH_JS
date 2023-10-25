@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+<script>
+    //Bài 1
+    let a = +prompt("Nhập số a: ")
+    let b = +prompt("Nhập số b: ")
+    if ( a % b == 0){
+        alert('a chia hết cho b')
+    } else {
+        alert('a không chia hết cho b')
+    }
+    //Bài 2
+    let tuoi = +prompt("Nhập số tuổi: ")
+    if ( tuoi < 16){
+        alert('Không đủ điều kiện vào lớp 10')
+    } else {
+        alert('Đủ điều kiện vào lớp 10')
+    }
+    //Bài 3
+    let so = +prompt("Nhập số: ")
+    if (so < 0){
+        alert('Số nhỏ hơn 0')
+    } else {
+        alert('Số lớn hơn 0')
+    }
+    //Bài 4
+    let x = +prompt("Nhập số thứ nhất: ")
+    let y = +prompt("Nhập số thứ hai: ")
+    let z = +prompt("Nhập số thứ ba: ")
+    if ( x > y && x > z ){
+        alert('Số lớn nhất là: ' + x)
+    } else{
+        if (y > x && y > z ){
+            alert(' Số lớn nhất là: ' + y)
+        } else{
+            alert(' Số lớn nhất là: ' + z)
+        }
+    }
+    //Bài 5
+    let bkt = +prompt("Nhập điểm bài kiểm tra: ")
+    let bgk = +prompt("Nhập điểm bài thi giữa kỳ: ")
+    let bck = +prompt("Nhập điểm bài thi cuối kỳ: ")
+    let tong = bkt + bgk + bck;
+    if ( tong < 5){
+        alert('Học lực: Yếu')
+    }
+    if (tong < 8 && tong > 5){
+        alert('Học lực: Khá')
+    }
+    if (tong >= 8){
+        alert('Học lực: Giỏi')
+    }
+    //Bài 6
+    let ds =  +prompt("Nhập doanh số bán hàng: ")
+    if ( ds < 100){
+        alert('Hoa hồng là 3%')
+    }
+    if (ds >= 100){
+        alert('Hoa hồng là 5%')
+    }
+    if (ds >= 200){
+        alert('Hoa hồng là 10%')
+    }
+    //Bài 7
+    let phut =  +prompt("Nhập số phút: ")
+    if ( phut < 5){
+        alert('Cước là 200/phút' )
+    }
+    if (phut < 10 && phut > 5){
+        alert('Cước là 180/phút')
+    }
+    if ( phut < 50 && phut > 10){
+        alert('Cước là 150/phút')
+    }
+</script>
+</body>
+</html>
