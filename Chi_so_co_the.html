@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tỉ số cân nặng cơ thể</title>
+</head>
+<body>
+<h1>
+    Nhập thông tin:
+</h1>
+<table>
+    <tr>
+        <td><p>Cân nặng: </p></td>
+        <td><input type="text" id="nang"></td>
+    </tr>
+    <tr>
+        <td><p>Chiều cao:  </p></td>
+        <td><input type="text" id="cao"> </td>
+    </tr>
+</table>
+<button onclick="kt()">Kiểm tra</button>
+<p id="kq"></p>
+<script>
+    function kt() {
+        let height =document.getElementById('cao').value;
+        let weight =document.getElementById('nang').value;
+        let bmi =  weight / (height*height);
+        if (bmi < 18)
+            document.getElementById('kq').innerHTML = 'Chỉ số BMI: ' + bmi + ' Bạn đang thiếu cân'
+        else if (bmi < 25.0)
+            document.getElementById('kq').innerHTML = 'Chỉ số BMI: ' + bmi + ' Bạn đang cân đối'
+        else if (bmi < 30.0)
+            document.getElementById('kq').innerHTML = 'Chỉ số BMI: ' + bmi + ' Bạn đang thừa cân'
+        else
+            document.getElementById('kq').innerHTML = 'Chỉ số BMI: ' + bmi + ' Bạn đang béo phì'
+
+    }
+</script>
+
+
+</body>
+</html>
