@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="https://i.pinimg.com/originals/8d/a2/00/8da200762e047178d5d7d014e8c47189.png" alt=""
+     style =" width: 100px; position: relative;top: 0;left: 0" id="x">
+</body>
+<script>
+  let anh = document.getElementById('x');
+  let vanToc = 50;
+  setInterval(()=> {
+    anh.style.left = parseInt(anh.style.left) + vanToc + 'px';
+    if ( parseInt(anh.style.left) > window.innerWidth || parseInt(anh.style.left) < 0){
+     //anh.style.left = 0;
+      vanToc = -vanToc;
+    }
+  },50)
+  //Nếu ảnh chạm phải thì xuất hiện ngay ở cạnh trái để đi tiếp
+
+  //Nếu ảnh chạm phải thì quay đầu
+
+</script>
+</html>
