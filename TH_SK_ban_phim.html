@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành sự kiện bàn phím</title>
+</head>
+<body>
+<img src="https://i.pinimg.com/originals/8d/a2/00/8da200762e047178d5d7d014e8c47189.png" alt=""
+     style =" width: 200px; position: relative;top: 0;left: 0" id="x">
+<script>
+    let anh = document.getElementById('x');
+    let vanTocX = 1;
+    let vanTocY = 0;
+    setInterval(()=> {
+        anh.style.left = parseInt(anh.style.left) + vanTocX + 'px';
+        anh.style.top = parseInt(anh.style.top) + vanTocY + 'px';
+    },1);
+    window.addEventListener('keydown', (e) => {
+
+        if (e.key === 'd'){
+            //anh.style.left = parseInt(anh.style.left) + vanToc + 'px';
+            vanTocX = 1 ;
+            vanTocY = 0 ;
+        }
+        if (e.key === 's'){
+            //anh.style.top= parseInt(anh.style.top)  + vanToc + 'px';
+            vanTocX = 0;
+            vanTocY = 1;
+        }
+        if (e.key === 'a'){
+            //anh.style.left = parseInt(anh.style.left) - vanToc + 'px';
+            vanTocX = -1;
+            vanTocY = 0;
+        }
+        if (e.key === 'w'){
+            //anh.style.top = parseInt(anh.style.top) - vanToc + 'px';
+            vanTocX = 0;
+            vanTocY = -1;
+        }
+    });
+
+</script>
+</body>
+</html>
