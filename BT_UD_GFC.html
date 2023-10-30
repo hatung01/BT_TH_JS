@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập ứng dụng good fast cheap</title>
+</head>
+<body>
+<input type="checkbox" id="g" onchange="ck()">Good
+<input type="checkbox" id="f" onchange="ck1()">Fast
+<input type="checkbox" id="c" onchange="ck2()">Cheap
+<script>
+    let g = document.getElementById('g');
+    let f = document.getElementById('f');
+    let c = document.getElementById('c');
+    function ck() {
+        if (c.checked && f.checked ){
+            c.checked = false;
+        }
+    }
+    function ck1() {
+        if (g.checked  && c.checked ){
+            g.checked = false;
+        }
+    }
+    function ck2() {
+        if (g.checked  && f.checked ){
+            f.checked = false;
+        }
+    }
+</script>
+</body>
+</html>
