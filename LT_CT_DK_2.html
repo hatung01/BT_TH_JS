@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 2</title>
+</head>
+<body>
+<script>
+  //Bài 1
+  let doc = +prompt("Nhập độ C: ");
+  let dof = doc * 9/5 + 32;
+  alert("Chuyển qua độ F là: " + dof + " độ F");
+
+  //Bài 2
+  let met = +prompt("Nhập số mét: ");
+  let ft = met * 3.2808;
+  alert("Chuyển qua feet là : " + ft + " feet");
+
+  //Bài 3
+  let a = +prompt("Cạnh a bằng: ");
+  alert("Diện tích hình vuông cạnh a: " + (a*a) + " mét vuông");
+
+  //Bài 4
+  let e = +prompt("Cạnh x bằng: ");
+  let r = +prompt("Cạnh y bằng: ");
+  alert("Diện tích hình chữ nhật là : " + (e*r) + " mét vuông");
+
+  //Bài 5
+  let x = +prompt("Cạnh x bằng: ");
+  let y = +prompt("Cạnh y bằng: ");
+  alert("Diện tích tam giác vuông là : " + ((x*y)/2) + " mét vuông");
+
+  //Bài 6
+  alert("Phương trình bậc 1 có dạng y2 = a2*x2 + b2");
+  let y2 = +prompt("Nhập số y2: ");
+  let a2 = +prompt("Nhập số a2: ");
+  let b2 = +prompt("Nhập số b2: ");
+  alert("Nghiệm x2 của phương trình là: " + ((y2 - b2)/a2) );
+
+  //Bài 7
+  alert(" Phương trình bậc 2 có dạng a3*x3^2 + b3*x3 + c3 = 0");
+  let a3 = +prompt("Nhập số a3: ");
+  let b3 = +prompt("Nhập số b3: ");
+  let c3 = +prompt("Nhập số c3: ");
+  let delta = b3*b3 - 4*a3*c3;
+  if (delta > 0){
+      alert("Phương trình có 2 nghiệm là: " + ((-b3 + Math.sqrt(delta))/2*a3) + "và" + ((-b3 - Math.sqrt(delta))/2*a3));
+  } else if (delta == 0){
+      alert("Phương trình có nghiệm kép là: " + (-b3/(2*a3)));
+  } else {
+      alert("Phương trình vô nghiệm.");
+  }
+  // 2**3;
+  // 2**(1/2)
+  // Math.sqrt(2)
+  //Bài 8
+  let tuoi = +prompt("Nhập số tuổi: ");
+  if (tuoi > 0 && tuoi < 120){
+    alert("Số nhập vào là tuổi của một người.")
+  } else{
+    alert("Số nhập vào không phải là tuổi của một người.")
+  }
+
+  //Bài 9
+  let a1 = +prompt("Nhập số a1: ");
+  let b1 = +prompt("Nhập số b1: ");
+  let c1 = +prompt("Nhập số c1: ");
+  if (a1 > 0 && b1 > 0 && c1 > 0 && a1 + b1 > c1 && a1 + c1 > b1 && b1 + c1 > a1){
+      alert("3 số thực nhập vào là cạnh của 1 tam giác.");
+  }else {
+    alert("3 số thực nhập vào không phải là cạnh của 1 tam giác.");
+  }
+
+  //Bài 10
+  let sd = +prompt("Nhập số điện tiêu thụ trong 1 tháng (kWh): ");
+  if (sd < 0){
+      alert(" Số điện tiêu thụ không đúng. Vui lòng nhập lại.")
+  } else if ( sd >= 0 && sd <= 50){
+      alert("Số tiền điện phải trả là: " + sd*1.678 + " VND");
+  } else if ( sd >= 51 && sd <= 100){
+      alert("Số tiền điện phải trả là: " + sd*1.734 + " VND");
+  }else if ( sd >= 101 && sd <= 200){
+      alert("Số tiền điện phải trả là: " + sd*2.014 + " VND");
+  }else if ( sd >= 201 && sd <= 300){
+      alert("Số tiền điện phải trả là: " + sd*2.536 + " VND");
+  }else if ( sd >= 301 && sd <= 400){
+      alert("Số tiền điện phải trả là: " + sd*2.834 + " VND");
+  }else {
+      alert("Số tiền điện phải trả là: " + sd*2.927 + " VND");
+  }
+
+  //Bài 11
+  let st = +prompt("Nhập số thu nhập trong 1 tháng (triệu đồng): ");
+  if (st <= 0){
+      alert(" Số thu nhập không đúng. Vui lòng nhập lại.")
+  } else if ( st > 0 && st <= 5){
+      alert("Số tiền thuế phải trả là: " + st*5/100 + " triệu đồng");
+  } else if ( st > 5 && st <= 10){
+      alert("Số tiền thuế phải trả là: " + st*10/100 + " triệu đồng");
+  }else if ( st > 10 && st <= 18){
+      alert("Số tiền thuế phải trả là: " + st*15/100 + " triệu đồng");
+  }else if ( st > 18 && st <= 32){
+      alert("Số tiền thuế phải trả là: " + st*20/100 + " triệu đồng");
+  }else if ( st > 32 && st <= 52){
+      alert("Số tiền thuế phải trả là: " + st*25/100 + " triệu đồng");
+  }else if ( st > 52 && st <= 80){
+      alert("Số tiền thuế phải trả là: " + st*30/100 + " triệu đồng");
+  }else {
+      alert("Số tiền thuế phải trả là: " + st*35/100 + " triệu đồng");
+  }
+
+  //Bài 12
+  // let stv = +prompt("Nhập số tiền vay (đồng): ");
+  // let st = +prompt("Nhập số tháng cho vay: ");
+  // let ls = +prompt("Nhập lãi suất vay theo tháng (%): ");
+  // let ltd = stv * ls;
+
+</script>
+</body>
+</html>
